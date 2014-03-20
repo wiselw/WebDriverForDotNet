@@ -46,8 +46,8 @@ namespace SeleniumWebTest
             string a = driver.FindElement(By.Name("email")).GetAttribute("value");
             string b = driver.FindElement(By.Id("tbl"))
                 .FindElement(By.Name("email")).Text;
-            TestLog.WriteLine(a);//输出2
-            TestLog.WriteLine(b);//输出2
+            TestLog.WriteLine(a);//someone@163.com
+            TestLog.WriteLine(b);//10001
 
             
             
