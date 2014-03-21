@@ -2,7 +2,20 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Selenium Demo1</title>
-     <style type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#cleartxt").click(function () {
+                // alert($("#txt").attr("value"));
+                $("#txt").attr("value", "我是修改后的值")
+            });
+            $("#alert").click(function () {
+                alert($("#alert").attr("value"));
+                
+            });
+        });
+    </script>
+    <style type="text/css">
         h3
         {
             color: Green;
@@ -30,16 +43,18 @@
 <body>
     <h3>
         Selenium Demo1</h3>
-    <div >
+    <div>
         <label>
-            Email:</label><input type="text" id="inputemail" name="email" class="intro"></input>
-    </div>
-    <div >
-        <label>
-            Name: </label><input type="text" id="inputname" name="name" class="intro"/>
+            Email:</label><input type="text" id="inputemail" name="email" class="intro" />
     </div>
     <div>
-    <a href="http://www.baidu.com" target = "_blank">百度一下</a>
+        <label>
+            Name:
+        </label>
+        <input type="text" id="inputname" name="name" class="intro" />
+    </div>
+    <div>
+        <a href="http://www.baidu.com" target="_blank">百度一下</a>
     </div>
     <div>
         <table id='tbl'>
@@ -55,24 +70,39 @@
                 </th>
             </tr>
             <tr>
-                <td><label type="text"  name="email" class="intro">10001</label>
-                </td>
-                <td><span>毛衣党</span>
+                <td>
+                    <label name="email" class="intro">
+                        10001</label>
                 </td>
                 <td>
-                <span>黑色</span> 
+                    <span>毛衣党</span>
+                </td>
+                <td>
+                    <span>黑色</span>
                 </td>
             </tr>
             <tr>
-                <td><span>10002</span>
-                </td>
-                <td><span>毛裤党</span>
+                <td>
+                    <span>10002</span>
                 </td>
                 <td>
-                <span>红色</span> 
+                    <span>毛裤党</span>
+                </td>
+                <td>
+                    <span>红色</span>
                 </td>
             </tr>
         </table>
     </div>
+    <div><span>点击按钮“修改输入框”，将输入框内容由“我是默认值”改为“我是修改后的值”：</span>
+        <input type="button" id="cleartxt" value="修改输入框" /><input type="text" id="txt" value="我是默认值" /></div>
+    <div><span>清空输入框内容，将输入框内容由“我是默认值”变为空：</span>
+        <input type="text" id="cleartextdemo" value="我是默认值" /></div>
+        <h3>模拟键盘输入</h3>
+        <div><span>点击按钮“弹出框”，弹出模态框，模拟键盘输入空格键，关闭模态框：</span>
+        <input type="button" id="alert" value="弹出框" /></div>
+    <div><span>Ctrl+A</span><input type="text" id="ctrla"  /></div>
+    <div><span></span></div>
+    <div><span></span></div>
 </body>
 </html>
